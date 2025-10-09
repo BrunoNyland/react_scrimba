@@ -1,0 +1,28 @@
+* {
+  font-family: "Orbitron", sans-serif;
+  line-height: 1.5;
+  font-weight: 600;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+}
+
+header {
+  padding: 20px;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  background-color: #262626;
+}
+
+header > img {
+  height: 40px;
+  padding-right: 20px;
+}

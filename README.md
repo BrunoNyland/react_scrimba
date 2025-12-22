@@ -10,3 +10,5 @@ npm install
 ```bash
 npm run dev
 ```
+
+3. Trocar as api keys

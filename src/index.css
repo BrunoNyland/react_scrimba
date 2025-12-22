@@ -187,15 +187,13 @@ header > img {
   border-radius: 8px;
   font-size: clamp(1rem, 2vw, 1.1rem);
   cursor: pointer;
-  /* box-shadow: 0 4px 12px rgba(252, 81, 81, 0.4); */
   transition: transform 150ms ease, box-shadow 150ms ease;
 }
 
 .get-recipe-container button:hover {
-  /* transform: scale(1.05); */
-  /* box-shadow: 0 6px 20px rgba(252, 81, 81, 0.6); */
+  transform: scale(1.05);
 }
 
 .get-recipe-container button:active {
-  /* transform: scale(0.98); */
+  transform: scale(0.98);
 }

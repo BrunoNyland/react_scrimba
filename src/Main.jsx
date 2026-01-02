@@ -1,10 +1,11 @@
-import { useState } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import Recipe from './Recipe'
 import IngredientList from './IngredientList'
 
 function Main() {
   const [ingredients, setIngredients] = useState([])
   const [recipeShown, setRecipeShown] = useState(false)
+  const recipeSection = useRef(null)
 
   function addIngredient(formData) {
     const newIngredient = formData.get('ingredient')
@@ -18,6 +19,15 @@ function Main() {
     setRecipeShown(prev => !prev)
   }
 
+  useEffect(
+    () => {
+      if (recipeShown){
+        recipeSection.current.scrollIntoView({behavior:"smooth"});
+      }
+    },
+    [recipeShown]
+  )
+
   return (
     <>
       <section className="section-add-ingredient">
@@ -27,7 +37,7 @@ function Main() {
         </form>
       </section>
       <IngredientList showRecipe={showRecipe} ingredients={ingredients}/>
-      <Recipe recipeShown={recipeShown}/>
+      <Recipe recipeShown={recipeShown} ref={recipeSection}/>
     </>
   )
 }

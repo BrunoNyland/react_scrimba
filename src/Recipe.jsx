@@ -2,7 +2,7 @@ export default function Recipe(props){
     return <>
         {
             props.recipeShown ?
-            <section className="section-recipe-container">
+            <section className="section-recipe-container" ref={props.ref}>
                 <h2>Chefia Recomenda:</h2>
                 <article className="suggested-recipe-container" aria-live="polite">
                     <p>Based on the ingredients you have available, I would recommend making a simple a delicious <strong>Beef Bolognese Pasta</strong>. Here is the recipe:</p>
